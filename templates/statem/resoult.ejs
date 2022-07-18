@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <%- include('../partials/navbar'); %>
+    <div>
+        <div class="container description">
+            <form action="/xlsx-statements-result" method="post" enctype="multipart/form-data">
+            <blockquote class="blockquote">
+                <label class="mb-0" for="file">Statement XLSX</label>
+                <footer class="blockquote-footer"><input type="file" name="file" id="file"><cite title="Source Title"><button>Send</button></cite></footer>
+              </blockquote>
+              <button></button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.wrapperPlace {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    color:rgb(30, 30, 30);
+    border: 1px solid firebrick;
+    margin: 1em 0;
+    padding: 1em 0;
+    border-radius: 25px;
+    background-color: #805A3B;
+}
+.logo {
+    max-height: 30px;
+    margin-top: -7px;
+}
+.textPlace{
+    color: rgb(232, 237, 240);
+    font-weight: 500;
+}
+.wrapperPlace img {
+    border: 1px salmon solid;
+    border-radius: 15px;
+    max-width: 100%;
+    margin: 1em 0;
+}
+iframe {
+    margin: 1em;
+    border-radius: 1em;
+}
+.wrapperReview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.containerReview {
+    min-width: 300px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 3px solid silver; 
+}
+.review {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1em 0 1em 1em;
+}
+.review img {
+    border: none;
+    max-width: 30px;
+}
+.review span {
+    font-size: 25px;
+    margin-left: 5px;
+}
+
+.wrapperRandom {
+    animation: show 3s linear forwards;
+}
+
+.wraperVideo {
+    top: -19px;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+#myVideo {
+    min-width: 100%;
+    min-height: 100%;
+}
+.descVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(77, 66, 66, 0.459);
+    z-index: 1;
+}
+.descVideo h1 {
+    color: aliceblue;
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 3em;
+}
+@keyframes show {
+    0% {
+        border-radius: 50%;
+        transform:  rotate(360deg);
+    }
+    100% {
+        transform:  rotate(0deg);
+        border: none;
+        top: 0px;
+    }
+}
