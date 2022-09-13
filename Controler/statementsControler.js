@@ -1,7 +1,7 @@
 const path = require('path')
 const readXlsxFile = require('read-excel-file/node')
 const fs = require('fs')
-const createCsvWriter = require('csv-writer').createObjectCsvWriter
+const jsonToExsel = require('../helpers/JsonTo').convertJsonToExsel
 
 exports.statements = async (req, res) => {
    res.render('statem/statements', { title: 'XLSX', active: 'main' })
@@ -60,19 +60,7 @@ exports.xlsxStatementsResolt = async (req, res) => {
                      return o
                    }, [])
 
-                  const csvWriter = createCsvWriter({
-                     path: path.join(__dirname, '..', 'data', 'data.csv'),
-                     header: [
-                        { id: 'key', title: 'key' },
-                        { id: 'grade', title: 'grade' }
-                     ]
-                  })
-                 
-                  csvWriter.writeRecords(newUsers)   
-                     .then(() => {
-                         console.log('...Done');
-                     });
-                  res.send('<a href="/download">Download CSV File</a>') 
+                   jsonToExsel(newUsers).then(result => res.sendFile(path.resolve(__dirname, '..', 'data', result)))
                 }  
               })
            })

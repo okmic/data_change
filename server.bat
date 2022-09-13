@@ -1,2 +1,2 @@
-node index
+npm run start
 pause
